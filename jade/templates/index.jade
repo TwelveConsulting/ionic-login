@@ -2,4 +2,7 @@ ion-pane
   ion-header-bar.bar-stable
     h1(class="title") Twelve example...
   ion-content
-    a.button(ui-sref="/twelve") Test ?
+    p TEST : {{ c.oauth_domain }}
+    p TEST : {{ c.redirect }}
+    oauth(site="{{c.oauth_app}}" client-id="{{c.oauth_id}}" profile-uri="" redirect-uri="{{c.redirect}}" scope="" template="templates/oauth.html")
+      span Plop ?

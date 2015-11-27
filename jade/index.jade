@@ -2,12 +2,14 @@ doctype html
 html(lang="en")
   head
     title
-
     meta(charset="utf-8")
     meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
     link(href="css/ionic.app.css" rel="stylesheet")
     script(src="lib/ionic/js/ionic.bundle.js")
+    script(src="lib/oauth-ng/dist/oauth-ng.js")
+    script(src="lib/ngstorage/ngStorage.js")
+    script(src="lib/jquery/dist/jquery.js")
     script(src="cordova.js")
     script(src="js/app.js")
-  body(ng-app="starter")
+  body(ng-app="starter" data-oauth-id="#{env.OAUTH_ID}" data-oauth-domain="#{env.OAUTH_DOMAIN}")
     ion-nav-view
