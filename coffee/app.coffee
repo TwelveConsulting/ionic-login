@@ -25,5 +25,5 @@ angular.module('starter', ['ionic', 'oauth'])
 
 .controller 'indexCtrl', ($scope)->
   this.oauth_id = $('body').data('oauth-id')
-  this.oauth_app = '//' + $('body').data('oauth-domain')
+  this.oauth_app = 'https://' + $('body').data('oauth-domain')
   this.redirect = 'https://'+ window.location.host
